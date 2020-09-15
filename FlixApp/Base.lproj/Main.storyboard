@@ -34,31 +34,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ayW-2l-cDl">
-                                <rect key="frame" x="0.0" y="34" width="414" height="862"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ayW-2l-cDl">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tNG-mJ-ARC">
                                     <size key="itemSize" width="143" height="188"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieGridCell" id="Qgd-aY-pxB" customClass="MovieGridCell" customModule="FlixApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="143" height="188"/>
+                                        <rect key="frame" x="5" y="0.0" width="193" height="207"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SyB-7K-rEN">
-                                            <rect key="frame" x="0.0" y="0.0" width="143" height="188"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="193" height="207"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="405-Fy-iAX">
-                                                    <rect key="frame" x="0.0" y="8" width="139" height="180"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="405-Fy-iAX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="193" height="207"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="143" id="HS2-aB-pEx"/>
+                                                        <constraint firstAttribute="height" constant="180" id="tEJ-iq-AVw"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="405-Fy-iAX" secondAttribute="trailing" id="8r8-6Z-PVR"/>
+                                                <constraint firstItem="405-Fy-iAX" firstAttribute="leading" secondItem="SyB-7K-rEN" secondAttribute="leading" id="POk-ht-sat"/>
+                                                <constraint firstItem="405-Fy-iAX" firstAttribute="top" secondItem="SyB-7K-rEN" secondAttribute="top" id="aRU-3r-iiH"/>
+                                                <constraint firstAttribute="bottom" secondItem="405-Fy-iAX" secondAttribute="bottom" id="hd1-yW-AnQ"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="143" height="188"/>
+                                        <size key="customSize" width="193" height="207"/>
                                         <connections>
                                             <outlet property="posterView" destination="405-Fy-iAX" id="mgs-bs-Usc"/>
                                         </connections>
@@ -67,6 +75,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ayW-2l-cDl" firstAttribute="trailing" secondItem="Rtu-ja-2jq" secondAttribute="trailing" id="5yd-IG-mhb"/>
+                            <constraint firstItem="ayW-2l-cDl" firstAttribute="top" secondItem="Rtu-ja-2jq" secondAttribute="top" id="XTR-gR-4yi"/>
+                            <constraint firstItem="ayW-2l-cDl" firstAttribute="leading" secondItem="Rtu-ja-2jq" secondAttribute="leading" id="dC9-st-hoz"/>
+                            <constraint firstItem="ayW-2l-cDl" firstAttribute="bottom" secondItem="Rtu-ja-2jq" secondAttribute="bottom" id="tm2-wT-kuX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Rtu-ja-2jq"/>
                     </view>
                     <navigationItem key="navigationItem" title="Superhero" id="XGz-Ew-tlg"/>
@@ -76,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QME-GG-ty9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-55.072463768115945" y="-157.36607142857142"/>
+            <point key="canvasLocation" x="200.00000000000003" y="-210.9375"/>
         </scene>
         <!--Movies-->
         <scene sceneID="tne-QT-ifu">
@@ -118,6 +132,7 @@
                                                     <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="posterView" destination="ngh-S1-zhK" id="jT5-vh-Ulu"/>
